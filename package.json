@@ -5,7 +5,7 @@
   "main": "js/scripts.js",
   "scripts": {
     "watch": "gulp watch",
-    "build": "CI= gulp build"
+    "build": "CI= react-scripts build"
   },
   "keywords": [
     "portfolio",
