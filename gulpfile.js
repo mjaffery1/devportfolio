@@ -1,5 +1,4 @@
 var gulp = require('gulp');
-var build = require('gulp-build');
 var plumber = require('gulp-plumber');
 const uglify = require('gulp-uglify');
 const sass = require('gulp-sass');
@@ -37,10 +36,4 @@ gulp.task('styles', function () {
 gulp.task('watch', function() {
     gulp.watch('./js/scripts.js', gulp.series('scripts'));
     gulp.watch('./scss/styles.scss', gulp.series('styles'));
-});
- 
-gulp.task('build', async function() {
-  gulp.src('./js/scripts.js')
-      .pipe(build({ GA_ID: '123456' }))
-      .pipe(gulp.dest('dist'))
 });
