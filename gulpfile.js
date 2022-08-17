@@ -39,7 +39,7 @@ gulp.task('watch', function() {
     gulp.watch('./scss/styles.scss', gulp.series('styles'));
 });
  
-gulp.task('build', function() {
+gulp.task('build', async function() {
   gulp.src('./js/scripts.js')
       .pipe(build({ GA_ID: '123456' }))
       .pipe(gulp.dest('dist'))
